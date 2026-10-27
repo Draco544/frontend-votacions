@@ -1,14 +1,10 @@
 import { useAppStore } from "@/stores/app";
-import { el } from "vuetify/locale";
-
-
-
 
 class WebSocketService {
     constructor(url){
         this.url = url;
         this.socket = null;
-        this.store = useAppStore
+        this.store = useAppStore();
     }
 
     connect() {
