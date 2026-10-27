@@ -5,6 +5,7 @@
     import { onMounted , onUnmounted } from 'vue'
     import botoVotar from '@/components/botoVotar.vue';
 
+    import ChartComponent from '@/components/ChartComponent.vue';
     //PINIA
     import { useAppStore } from '@/stores/app'
     const store = useAppStore()
@@ -47,7 +48,7 @@
      <v-row>
       <v-col cols="12">
         GRAFICS
-        
+        <ChartComponent />
       </v-col>
     </v-row>
 
