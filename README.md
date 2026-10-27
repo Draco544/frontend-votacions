@@ -1,20 +1,33 @@
-Votacions 
+# Votacions
 
 Proyecto académico desarrollado en el ciclo formativo de Desarrollo de Aplicaciones Multiplataforma (DAM).
 
-Se trata de una aplicación web de votaciones desarrollada tomando como referencia el proyecto votacionsDAM2026. El objetivo es poner en práctica los conocimientos adquiridos durante el ciclo, especialmente en el desarrollo de interfaces web y la comunicación entre cliente y servidor.
+Se trata de una aplicación web de votaciones inspirada en el proyecto `votacionsDAM2026`, con el objetivo de poner en práctica los conocimientos adquiridos en el ciclo, especialmente en el desarrollo de interfaces web, la gestión del estado, la navegación entre pantallas y la comunicación entre cliente y servidor.
 
-Tecnologías utilizadas
-Vue 3
-Vite
-Pinia
-Vue Router
-Vuetify
-Node.js
-WebSockets
-Docker y Docker Compose
-Estructura del proyecto
-text
+## Objetivo del proyecto
+
+El objetivo principal de esta aplicación es crear un sistema de votación funcional y visualmente clara, utilizando tecnologías modernas del ecosistema de Vue y Node.js. También permite trabajar con conceptos como:
+
+- Desarrollo front-end con Vue 3
+- Gestión del estado con Pinia
+- Enrutado con Vue Router
+- Comunicación cliente-servidor mediante WebSockets
+- Contenedores con Docker y Docker Compose
+
+## Tecnologías utilizadas
+
+- Vue 3
+- Vite
+- Pinia
+- Vue Router
+- Node.js
+- WebSockets
+- Docker
+- Docker Compose
+
+## Estructura del proyecto
+
+```text
 votacions/
 ├── backend/
 │   ├── Dockerfile
@@ -25,46 +38,70 @@ votacions/
 │   ├── Dockerfile
 │   └── package.json
 ├── docker-compose.yml
-└── README.md
+├── README.md
+└── .gitignore
+```
 
-frontend/: contiene el código de la interfaz de usuario.
-frontend/src/: contiene el código fuente de la aplicación Vue.
-backend/: contiene el servidor y la lógica del backend.
-backend/server.js: punto de entrada del servidor.
-Dockerfile: define la configuración de cada servicio para Docker.
-docker-compose.yml: permite ejecutar el frontend y el backend conjuntamente.
-README.md: documentación del proyecto..
+## Descripción de directorios y archivos
 
-Instalación y ejecución
-Requisitos
-Git
-Docker y Docker Compose
-Ejecutar con Docker
+- `frontend/`: contiene la interfaz de usuario de la aplicación.
+- `frontend/src/`: almacena el código fuente de la aplicación Vue.
+- `backend/`: incluye el servidor y la lógica del backend.
+- `backend/server.js`: punto de entrada del servidor.
+- `Dockerfile`: configuración del contenedor para cada servicio.
+- `docker-compose.yml`: permite ejecutar simultáneamente el frontend y el backend.
+- `README.md`: documentación del proyecto.
 
+## Requisitos previos
 
-Construir y ejecutar la aplicación:
+Antes de ejecutar el proyecto, asegúrate de tener instalado:
 
-bash
+- Git
+- Docker
+- Docker Compose
+
+## Instalación y ejecución
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/Draco544/votacions.git
+cd votacions
+```
+
+### 2. Ejecutar con Docker
+
+Desde la raíz del proyecto, ejecuta:
+
+```bash
 docker compose up --build
+```
 
+Esto levantará tanto el backend como el frontend.
 
-Una vez iniciados los servicios, acceder al frontend desde el navegador:
+### 3. Acceder a la aplicación
 
-http://localhost:8080
+Una vez iniciados los servicios, puedes abrir la aplicación en el navegador:
 
-El backend utiliza el puerto 3000 para la comunicación con el frontend.
+- Frontend: http://localhost:8080
+- Backend: http://localhost:3000
 
-Para detener la aplicación:
+> El backend se utiliza para la comunicación con el frontend y para gestionar la lógica de votaciones.
 
-bash
+### 4. Detener la aplicación
+
+Para parar los contenedores, ejecuta:
+
+```bash
 docker compose down
+```
 
-Objetivo del proyecto
-
-El objetivo de este proyecto es aplicar de forma práctica los conceptos de desarrollo de aplicaciones vistos durante el ciclo de DAM, trabajando con Vue, la gestión del estado, la navegación entre pantallas y la comunicación entre frontend y backend.
-
-Referencia
+## Referencia
 
 Proyecto utilizado como referencia para el desarrollo:
 
-https://github.com/alvaroph/votacionsDAM2026
+- `votacionsDAM2026`
+
+## Notas
+
+Este proyecto está pensado como ejercicio académico para poner en práctica conceptos de desarrollo web full stack en un entorno realista, combinando tecnologías modernas y un flujo de trabajo basado en contenedores.
